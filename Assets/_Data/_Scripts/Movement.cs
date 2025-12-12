@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float horizonInput, verticalInput;
-    public float speed = 5f;
+    [SerializeField] protected float horizonInput, verticalInput;
+    [SerializeField] protected float speed = 5f;
     public Rigidbody2D rigi2D;
 
     void Start()
     {
-        // start game se tu dong add rigibody2D vao bien rigi2D
         this.rigi2D = GetComponent<Rigidbody2D>();
     }
 
@@ -29,9 +28,6 @@ public class Movement : MonoBehaviour
 
     protected void Moving()
     {
-        // tao 1 bien Vector2 la huong di chuyen cua player
-        // duong cheo cua hinh vuong 1, la 1.4. Dung Normalize de duong cheo la 1
-
         Vector2 direction = new(this.horizonInput, this.verticalInput);
         direction.Normalize();
 
