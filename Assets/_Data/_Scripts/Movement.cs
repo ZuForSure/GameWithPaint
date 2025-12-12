@@ -21,10 +21,6 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // lay input di chuyen gan vao bien horizonInput, "Horizontal" "Vertical" la mac dinh cua Unity
-        // horizon la di chuyen theo truc x (1: right, -1: left), vertical la truc y (1: up, -1: down)
-        // GetAxisRaw de lay so nguyen
-
         this.horizonInput = Input.GetAxisRaw("Horizontal");
         this.verticalInput = Input.GetAxisRaw("Vertical");
 
