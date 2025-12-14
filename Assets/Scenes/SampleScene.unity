@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e761045713307654795e2595cdf979ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 411652637}
   timeBtwShoot: 1
   timer: 0
   shootInput: 0
