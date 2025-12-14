@@ -6,7 +6,7 @@ public class PlayerShooting : MonoBehaviour
 {
     public Transform bullet;
     [SerializeField] protected float timeBtwShoot = 1f;
-    [SerializeField] protected float timer;
+    [SerializeField] protected float nextTimeShoot;
     [SerializeField] protected bool shootInput;
 
     void Start()
@@ -23,23 +23,24 @@ public class PlayerShooting : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(this.Shoot());
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            StopCoroutine(this.Shoot());
+            this.TryShoot();
         }
     }
 
-    protected IEnumerator Shoot()
+    protected void TryShoot()
+    {
+        if (Time.time < this.nextTimeShoot) return;
+
+        this.nextTimeShoot = Time.time + timeBtwShoot;
+        this.Shoot();
+    }
+
+    protected void Shoot()
     {
         Debug.Log("SHOOT");
 
         Transform newBullet = Instantiate(bullet);
         newBullet.transform.position = transform.position;
         newBullet.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(this.timeBtwShoot);
     }
 }
