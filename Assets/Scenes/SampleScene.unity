@@ -297,6 +297,10 @@ PrefabInstance:
       propertyPath: lookAtMouse
       value: 
       objectReference: {fileID: 1628018014}
+    - target: {fileID: 2790398135927587532, guid: 3e9830a38d5d5e94a8314bfbd6b23328, type: 3}
+      propertyPath: timeBtwShoot
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3694063883411668569, guid: 3e9830a38d5d5e94a8314bfbd6b23328, type: 3}
       propertyPath: m_Name
       value: Player
@@ -354,6 +358,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3255831398636677799, guid: f38f3e10054bd514bad85639d309bd76, type: 3}
+      propertyPath: playerShooting
+      value: 
+      objectReference: {fileID: 1628018013}
     - target: {fileID: 3394849557960131940, guid: f38f3e10054bd514bad85639d309bd76, type: 3}
       propertyPath: playerShooting
       value: 

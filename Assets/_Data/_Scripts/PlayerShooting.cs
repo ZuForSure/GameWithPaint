@@ -10,7 +10,9 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] protected float nextTimeShoot;
     [SerializeField] protected bool shootInput;
     [SerializeField] protected Vector3 shootDirection;
+    [SerializeField] protected Vector3 shootStartPos;
     public Vector3 ShootDirection => shootDirection;
+    public Vector3 ShootStartPos => shootStartPos;
 
     void Start()
     {
@@ -42,6 +44,7 @@ public class PlayerShooting : MonoBehaviour
     {
         Debug.Log("SHOOT");
         this.shootDirection = lookAtMouse.DirectionFromPlayer;
+        this.shootStartPos = transform.position;
 
         Transform newBullet = Instantiate(bullet);
         newBullet.SetPositionAndRotation(transform.position, transform.rotation);
