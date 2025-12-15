@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class BulletFly : MonoBehaviour
 {
-    public PlayerShooting playerShooting;
+    public Player player;
     [SerializeField] protected Rigidbody2D bulletRB;
     [SerializeField] protected float flySpeed = 10f;
     [SerializeField] protected Vector2 flyDirection = Vector2.right;
+
+    private void Reset()
+    {
+        if (this.player != null) return;
+        this.player = GameObject.Find("Player").GetComponent<Player>();
+    }
 
     void Start()
     {
@@ -16,7 +22,7 @@ public class BulletFly : MonoBehaviour
 
     private void OnEnable()
     {
-        this.flyDirection = playerShooting.ShootDirection;
+        this.flyDirection = this.player.PlayerShooting.ShootDirection;
         this.Flying();
     }
 

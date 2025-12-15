@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] protected float horizonInput, verticalInput;
     [SerializeField] protected float speed = 5f;
@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        this.rigi2D = GetComponent<Rigidbody2D>();
+        this.rigi2D = transform.parent.GetComponent<Rigidbody2D>();
     }
 
     void Update()
