@@ -5,13 +5,16 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     public Transform bullet;
+    public LookAtMouse lookAtMouse;
     [SerializeField] protected float timeBtwShoot = 1f;
     [SerializeField] protected float nextTimeShoot;
     [SerializeField] protected bool shootInput;
+    [SerializeField] protected Vector3 shootDirection;
+    public Vector3 ShootDirection => shootDirection;
 
     void Start()
     {
-        
+        this.lookAtMouse = GetComponent<LookAtMouse>();
     }
 
     void Update()
@@ -38,6 +41,7 @@ public class PlayerShooting : MonoBehaviour
     protected void Shoot()
     {
         Debug.Log("SHOOT");
+        this.shootDirection = lookAtMouse.DirectionFromPlayer;
 
         Transform newBullet = Instantiate(bullet);
         newBullet.SetPositionAndRotation(transform.position, transform.rotation);
