@@ -40,7 +40,7 @@ public class PlayerShooting : MonoBehaviour
         Debug.Log("SHOOT");
 
         Transform newBullet = Instantiate(bullet);
-        newBullet.transform.position = transform.position;
+        newBullet.SetPositionAndRotation(transform.position, transform.rotation);
         newBullet.gameObject.SetActive(true);
     }
 }
