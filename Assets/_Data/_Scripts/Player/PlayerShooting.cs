@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public Transform bullet;
-    public LookAtMouse lookAtMouse;
+    [SerializeField] protected Transform bullet;
+    [SerializeField] protected LookAtMouse lookAtMouse;
     [SerializeField] protected float timeBtwShoot = 1f;
-    [SerializeField] protected float nextTimeShoot;
-    [SerializeField] protected bool shootInput;
-    [SerializeField] protected Vector3 shootDirection;
-    [SerializeField] protected Vector3 shootStartPos;
+    protected Vector3 shootStartPos;
+    protected Vector3 shootDirection;
+    private float nextTimeShoot;
+
     public Vector3 ShootDirection => shootDirection;
-    public Vector3 ShootStartPos => shootStartPos;
 
     void Start()
     {
