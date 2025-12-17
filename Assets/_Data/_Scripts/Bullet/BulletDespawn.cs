@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletDespawn : MonoBehaviour
+public class BulletDespawn : BulletAbstract
 {
-    public PlayerShooting playerShooting;
+    [Header("Bullet Despawn")]
     [SerializeField] float maxDistance = 20f;
 
     void Update()
@@ -14,7 +12,7 @@ public class BulletDespawn : MonoBehaviour
 
     protected void DespawnByDistance()
     {
-        float distance = Vector3.Distance(playerShooting.ShootDirection, transform.position);
+        float distance = Vector3.Distance(this.player.PlayerShooting.ShootDirection, transform.position);
         if (distance < maxDistance) return;
         Destroy(transform.parent.gameObject);
     }

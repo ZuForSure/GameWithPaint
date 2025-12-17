@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b222946a2834cd141813c71b5d6aa6ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerShooting: {fileID: 2790398135927587532}
 --- !u!1 &4300737841972377006
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,9 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e761045713307654795e2595cdf979ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1229749051310492051, guid: f38f3e10054bd514bad85639d309bd76, type: 3}
-  lookAtMouse: {fileID: 0}
-  timeBtwShoot: 1
+  bullet: {fileID: 0}
+  lookAtMouse: {fileID: 280736611833064666}
+  timeBtwShoot: 0.3
   nextTimeShoot: 0
   shootInput: 0
   shootDirection: {x: 0, y: 0, z: 0}

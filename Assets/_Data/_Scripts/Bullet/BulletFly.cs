@@ -2,18 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletFly : MonoBehaviour
+public class BulletFly : BulletAbstract
 {
-    public Player player;
+    [Header("Bullet Fly")]
     [SerializeField] protected Rigidbody2D bulletRB;
     [SerializeField] protected float flySpeed = 10f;
     [SerializeField] protected Vector2 flyDirection = Vector2.right;
-
-    private void Reset()
-    {
-        if (this.player != null) return;
-        this.player = GameObject.Find("Player").GetComponent<Player>();
-    }
 
     void Start()
     {

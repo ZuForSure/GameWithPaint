@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e43d10dd5cd1242b6f6523fb91a24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 6918131073584546092}
   player: {fileID: 0}
   bulletRB: {fileID: 6122322683532306391}
   flySpeed: 10
@@ -219,5 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5473089fc3ff1dd4ca2874780a2dae63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerShooting: {fileID: 0}
+  bullet: {fileID: 6918131073584546092}
+  player: {fileID: 0}
   maxDistance: 20
