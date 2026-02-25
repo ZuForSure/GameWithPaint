@@ -54,7 +54,15 @@ public class PoolManager : MonoBehaviour
         if (obj.TryGetComponent(out IPoolable poolable))
             poolable.OnSpawn();
 
-        poolDict[prefab].Enqueue(obj);
         return obj;
+    }
+
+    public void DeSpawn(GameObject prefab, GameObject obj)
+    {
+        if (obj.TryGetComponent(out IPoolable poolable))
+            poolable.OnDeSpawn();
+
+        obj.SetActive(false);
+        poolDict[prefab].Enqueue(obj);
     }
 }

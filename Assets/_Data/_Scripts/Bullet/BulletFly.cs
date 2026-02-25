@@ -2,24 +2,14 @@ using UnityEngine;
 
 public class BulletFly : BulletAbstract
 {
-    [Header("Bullet Fly")]
-    [SerializeField] protected Rigidbody2D bulletRB;
-    [SerializeField] protected float flySpeed = 10f;
-    [SerializeField] protected Vector2 flyDirection = Vector2.right;
-
-    void Start()
+    public void GetDictionForFlying()
     {
-        this.bulletRB = transform.parent.GetComponent<Rigidbody2D>();
-    }
-
-    private void OnEnable()
-    {
-        this.flyDirection = this.player.PlayerShooting.ShootDirection;
+        this.bullet.flyDirection = this.player.PlayerShooting.ShootDirection;
         this.Flying();
     }
 
     protected void Flying()
     {
-        this.bulletRB.velocity = this.flySpeed * this.flyDirection;
+        this.bullet.bulletRB.velocity = this.bullet.FlySpeed * this.bullet.flyDirection;
     }
 }

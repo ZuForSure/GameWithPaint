@@ -1,8 +1,9 @@
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class PlayerShooting : MonoBehaviour
 {
-    [SerializeField] protected Transform bullet;
+    [SerializeField] protected GameObject bullet;
     [SerializeField] protected LookAtMouse lookAtMouse;
     [SerializeField] protected float timeBtwShoot = 1f;
     protected Vector3 shootStartPos;
@@ -39,12 +40,10 @@ public class PlayerShooting : MonoBehaviour
 
     protected void Shoot()
     {
-        Debug.Log("SHOOT");
         this.shootDirection = lookAtMouse.DirectionFromPlayer;
         this.shootStartPos = transform.position;
 
-        Transform newBullet = Instantiate(bullet);
-        newBullet.SetPositionAndRotation(transform.position, transform.rotation);
-        newBullet.gameObject.SetActive(true);
+        GameObject bullet = PoolManager.Instance.Spawn(this.bullet, shootStartPos, transform.rotation);
+        bullet.GetComponent<Bullet>().prefab = this.bullet;
     }
 }

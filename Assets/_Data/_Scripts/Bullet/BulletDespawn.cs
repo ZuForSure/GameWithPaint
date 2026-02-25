@@ -14,6 +14,6 @@ public class BulletDespawn : BulletAbstract
     {
         float distance = Vector3.Distance(this.player.PlayerShooting.ShootDirection, transform.position);
         if (distance < maxDistance) return;
-        Destroy(transform.parent.gameObject);
+        //Destroy(transform.parent.gameObject);
     }
 }
