@@ -44,9 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdf4133e1c07b74686915028103e74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizonInput: 0
-  verticalInput: 0
   speed: 5
+  dashSpeed: 10
+  dashTime: 0.25
+  dashCooldown: 0.75
+  dashCooldownTimer: 0
+  dashCounter: 0
+  isDashing: 0
   rigi2D: {fileID: 2735613553703996697}
 --- !u!1 &3694063883411668569
 GameObject:
@@ -277,10 +281,6 @@ MonoBehaviour:
   bullet: {fileID: 0}
   lookAtMouse: {fileID: 280736611833064666}
   timeBtwShoot: 0.3
-  nextTimeShoot: 0
-  shootInput: 0
-  shootDirection: {x: 0, y: 0, z: 0}
-  shootStartPos: {x: 0, y: 0, z: 0}
 --- !u!114 &280736611833064666
 MonoBehaviour:
   m_ObjectHideFlags: 0
