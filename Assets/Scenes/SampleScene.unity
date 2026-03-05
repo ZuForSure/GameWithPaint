@@ -322,6 +322,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6121915714839891899, guid: 3e9830a38d5d5e94a8314bfbd6b23328, type: 3}
+      propertyPath: rigi2D
+      value: 
+      objectReference: {fileID: 6973951414985366242}
+    - target: {fileID: 6121915714839891899, guid: 3e9830a38d5d5e94a8314bfbd6b23328, type: 3}
+      propertyPath: dashCooldown
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -338,6 +346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b222946a2834cd141813c71b5d6aa6ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &6973951414985366242 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2735613553703996697, guid: 3e9830a38d5d5e94a8314bfbd6b23328, type: 3}
+  m_PrefabInstance: {fileID: 6973951414985366239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7707659645724836396
 PrefabInstance:
   m_ObjectHideFlags: 0
