@@ -74,8 +74,8 @@ Transform:
   m_GameObject: {fileID: 5279618079795001893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.92, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7567752426245693588}
@@ -175,5 +175,5 @@ MonoBehaviour:
   prefab: {fileID: 0}
   bulletRB: {fileID: 6122322683532306391}
   bulletFly: {fileID: 3394849557960131940}
-  flySpeed: 10
+  flySpeed: 20
   flyDirection: {x: 1, y: 0}

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     protected float horizonInput, verticalInput;
     [SerializeField] protected float speed = 5f;
-    [SerializeField] protected float dashSpeed = 10f;
+    [SerializeField] protected float dashSpeed = 5f;
     [SerializeField] protected float dashTime = .25f;
     [SerializeField] protected float dashCooldown = .75f, dashCooldownTimer, dashCounter;
     [SerializeField] protected bool isDashing = false;
